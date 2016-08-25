@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TypedSeller</title>
+    <script src="lib/jquery-1.9.1.min.js" rel="script"></script>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body style="padding-top: 51px">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="border: none; border-radius:0;">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" data-toggle="tab" href="#randomAds"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i> Typed Seller</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+            <li><a data-toggle="tab" href="#randomAds">Home</a></li>
+            <li><a data-toggle="tab" href="#mobiles">Mobiles</a></li>
+            <li><a data-toggle="tab" href="#cars">Cars</a></li>
+        </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-plus"></span> Post Ad </a></li>
+            </ul>
+            </div>
+    </div>
+</nav>
+<div class="tab-content" id="allAds">
+    <div id="randomAds" class="tab-pane fade in active">
+        <div class="row" id="Ads">
+        </div>
+    </div>
+        <div id="mobiles" class="tab-pane fade">
+        <div class="row" id="mads"></div>
+    </div>
+        <div id="cars" class="tab-pane fade">
+            <div id="cads" class="row"></div>
+    </div>
+</div>
+<div id="modals">
+</div>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<script src="scripts/app.js"></script>
+</body>
+</html>
