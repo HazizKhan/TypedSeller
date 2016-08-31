@@ -1,15 +1,6 @@
 /**
  * Created by Haziz on 8/21/2016.
  */
-// var names = [];
-// names.push(prompt("new name"));
-// names.push(prompt("new name"));
-// names.push(prompt("new name"));
-// names.push(prompt("new name"));
-// localStorage.setItem("names", JSON.stringify(names));
-// let items = localStorage.getItem('names');
-// let storedItems = JSON.parse(items);
-// console.log(storedItems[0]);
 var ads:Ads[] = [];
 var id = 0;
 interface _Ads{
@@ -63,8 +54,8 @@ class Mobile extends Ads implements _Mobile{
     }
     show(){
         let tid = "title"+id.toString();
-        let modal = `<div id="mobAd${id}" class="modal fade" role="dialog" style="!important;padding: 0"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title" data-dismiss="modal"><span class="glyphicon glyphicon-menu-left"></span>Back</h4></div><div class="modal-body"><div class="row"><div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 modalData cols" style="background-color: black"><img src="${this.image}" alt="${this.company} ${this.model}" class="modalImg"></div><div class="col-lg-7 col-md-6 col-sm-6 col-xs-12 modalData"><h2 class="Title">${this.company} ${this.model}</h2><span class="price">Rs. ${this.price}</span><table class="table table-striped"><tr><th>OS:</th><td>${this.os}</td></tr><tr><th>Memory:</th><td>${this.memory}</td></tr><tr><th>Processor: </th><td>${this.processor}</td></tr><tr><th>Display:</th><td>${this.screen}</td></tr><tr><th>Colors</th><td>${this.color}</td></tr><tr><th>Price</th><td>Rs. ${this.price}</td></tr></table></div></div></div></div></div></div>`;
-        let ad = `<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 cols"><div class="item" data-toggle="modal" data-target="#mobAd${id}"><img src="${this.image}" alt="${this.company} ${this.model}"><div><span>Rs. ${this.price}</span><h2 class="boxTitle ${tid}">${this.company} ${this.model}</h2></div></div></div>`;
+        let modal = `<div id="mobAd${id}" class="modal fade" role="dialog"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title" data-dismiss="modal"><span class="glyphicon glyphicon-menu-left"></span>Back</h4></div><div class="modal-body"><div class="row"><div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 modalData cols" style="background-color: black"><img src="${this.image}" alt="${this.company} ${this.model}" class="modalImg"></div><div class="col-lg-7 col-md-6 col-sm-6 col-xs-12 modalData"><h2 class="Title">${this.company} ${this.model}</h2><span class="price">Rs. ${this.price}</span><table class="table table-striped"><tr><th>OS:</th><td>${this.os}</td></tr><tr><th>Memory:</th><td>${this.memory}</td></tr><tr><th>Processor: </th><td>${this.processor}</td></tr><tr><th>Display:</th><td>${this.screen}</td></tr><tr><th>Colors</th><td>${this.color}</td></tr><tr><th>Price</th><td>Rs. ${this.price}</td></tr></table></div></div></div></div></div></div>`;
+        let ad = `<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 cols"><div class="item" data-toggle="modal" data-target="#mobAd${id}"><img src="${this.image}" alt="${this.company} ${this.model}"><div><span class="priceTag">Rs. ${this.price}</span><h2 class="boxTitle ${tid}">${this.company} ${this.model}</h2></div></div></div>`;
         document.getElementById("Ads").innerHTML += ad;
         document.getElementById("mads").innerHTML += ad;
         document.getElementById("modals").innerHTML += modal;
@@ -105,8 +96,8 @@ class Car extends Ads implements _Car{
     }
     show(){
         let tid = "title"+id.toString();
-        let modal = `<div id="cAds${id}" class="modal fade" role="dialog" style="!important;padding: 0"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title" data-dismiss="modal"><span class="glyphicon glyphicon-menu-left"></span>Back</h4></div><div class="modal-body"><div class="row"><div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 modalData cols" style="background-color: black"><img src="${this.image}" alt="Note7" class="modalImg"></div><div class="col-lg-7 col-md-6 col-sm-6 col-xs-12 modalData"><h2 class="Title">${this.company} ${this.model}</h2><span class="price">Rs. ${this.price}</span><table class="table table-striped"><tr><th>Engine: </th><td>${this.engine}</td></tr><tr><th>EPA Class: </th><td>${this.epaClass}</td></tr><tr><th>Style Name: </th><td>${this.styleName}</td></tr><tr><th>Drivetrain:</th><td>${this.driveTrain}</td></tr><tr><th>Passenger Capacity: </th><td>${this.passengerCapacity}</td></tr><tr><th>Passenger Doors: </th><td>${this.passengerDoors}</td></tr><tr><th>Body Style:</th><td>${this.bodyStyle}</td></tr><tr><th>Colors: </th><td>${this.color}</td></tr><tr><th>Price</th><td>Rs. ${this.price}</td></tr></table></div></div></div></div></div></div>`;
-        let ad = `<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 cols"><div class="item" data-toggle="modal" data-target="#cAds${id}"><img src="${this.image}" alt="${this.company} ${this.model}"><div><span>Rs. ${this.price}</span><h2 class="boxTitle ${tid}">${this.company} ${this.model}</h2></div></div></div>`;
+        let modal = `<div id="cAds${id}" class="modal fade" role="dialog"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title" data-dismiss="modal"><span class="glyphicon glyphicon-menu-left"></span>Back</h4></div><div class="modal-body"><div class="row"><div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 modalData cols" style="background-color: black"><img src="${this.image}" alt="${this.company} ${this.model}" class="modalImg"></div><div class="col-lg-7 col-md-6 col-sm-6 col-xs-12 modalData"><h2 class="Title">${this.company} ${this.model}</h2><span class="price">Rs. ${this.price}</span><table class="table table-striped"><tr><th>Engine: </th><td>${this.engine}</td></tr><tr><th>EPA Class: </th><td>${this.epaClass}</td></tr><tr><th>Style Name: </th><td>${this.styleName}</td></tr><tr><th>Drivetrain:</th><td>${this.driveTrain}</td></tr><tr><th>Passenger Capacity: </th><td>${this.passengerCapacity}</td></tr><tr><th>Passenger Doors: </th><td>${this.passengerDoors}</td></tr><tr><th>Body Style:</th><td>${this.bodyStyle}</td></tr><tr><th>Colors: </th><td>${this.color}</td></tr><tr><th>Price</th><td>Rs. ${this.price}</td></tr></table></div></div></div></div></div></div>`;
+        let ad = `<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 cols"><div class="item" data-toggle="modal" data-target="#cAds${id}"><img src="${this.image}" alt="${this.company} ${this.model}"><div><span>Rs. ${this.price}</span><h2 class="boxTitle ${tid}">${this.company} ${this.model}</h2></div></div></div>`;
 
         document.getElementById("Ads").innerHTML += ad;
         document.getElementById("cads").innerHTML += ad;
@@ -133,13 +124,80 @@ ads.unshift(new Mobile("Galaxy J7 2016", "Samsung", 32999,"	White, Black, Gold, 
 ads.unshift(new Car("86 2017", "Toyota", 2750867,"Red, Blue, Silver, White","Premium Unleaded H-4, 2.0 L","Minicompact Cars", "Manual (Natl)", "Rear Wheel Drive",4,2,"2dr Car", "images/toyota86.jpg"));
 // ads.unshift(new Mobile("Model", "company", 9399,"Color","processor","display","Memory", "OS", "Image"));
 // ads.unshift(new Car("Model", "Company", 2562525,"Color","engine","epa class", "style name", "drive train",5,4,"body style", "image"));
+var localAds = JSON.parse(localStorage.getItem("ads")) || [];
+for (let i = 0; i < localAds.length; i++){
+    // ads.unshift(localAds[i]);
+    if (localAds[i][0] === "car"){
+        ads.unshift(new Car(localAds[i][1],localAds[i][2],localAds[i][3],localAds[i][4],localAds[i][5],localAds[i][6],localAds[i][7],localAds[i][8],localAds[i][9],localAds[i][10],localAds[i][11],localAds[i][12]));
+    } else {
+        ads.unshift(new Mobile(localAds[i][1],localAds[i][2],localAds[i][3],localAds[i][4],localAds[i][5],localAds[i][6],localAds[i][7],localAds[i][8],localAds[i][9]))
+    }
+}
 
-
-for(let i = 0; i< ads.length; i++){
-    ads[i].show();
+for(let ind = 0; ind< ads.length; ind++){
+    ads[ind].show();
 }
 /**
  * ads.unshift(new Mobile("Model", "company", 9399,"Color","processor","display","Memory", "OS", "Image"));
+ *
+ *
  * ads.unshift(new Car("Model", "Company", 2562525,"Color","engine","epa class", "style name", "drive train",5,4,"body style", "image"));
  * //push ads detail in localstorage then push data on ads[];
  * **/
+let mimg = document.getElementById("mobImg");
+let mobNoImg = document.getElementById("mobNoImg");
+let cimg = document.getElementById("carImg");
+let carNoImg = document.getElementById("carNoImg");
+function imageUpload(txt, img, el){
+    txt.style.display = "none";
+    let fr = new FileReader();
+    fr.onload = function () {
+        img.src = fr.result;
+        img.style.display = "block";
+    };
+    if(el.files[0]){
+        fr.readAsDataURL(el.files[0])
+    }
+}
+function postAd(type){
+    let ad = JSON.parse(localStorage.getItem("ads")) || [];
+    if (type === 'car'){
+                // console.log("car");
+        // setTimeout(function () {
+        //     location.reload();
+        // }, 5000);
+        ad.push([
+            "car",
+            (<HTMLInputElement>document.getElementById('inputCm')).value,
+            (<HTMLInputElement>document.getElementById('inputCComp')).value,
+            parseFloat((<HTMLInputElement>document.getElementById('inputCr')).value),
+            (<HTMLInputElement>document.getElementById('inputCc')).value,
+            (<HTMLInputElement>document.getElementById('inputEngine')).value,
+            (<HTMLInputElement>document.getElementById('inputEpa')).value,
+            (<HTMLInputElement>document.getElementById('inputsname')).value,
+            (<HTMLInputElement>document.getElementById('inputDt')).value,
+            parseFloat((<HTMLInputElement>document.getElementById('inputPc')).value),
+            parseFloat((<HTMLInputElement>document.getElementById('inputPd')).value),
+            (<HTMLInputElement>document.getElementById('inputBs')).value,
+            (<HTMLImageElement>document.getElementById('carImg')).src
+
+        ]);
+        localStorage.setItem("ads", JSON.stringify(ad));
+        location.reload();
+    }else {
+        ad.push([
+            "mob",
+            (<HTMLInputElement>document.getElementById('inputMm')).value,
+            (<HTMLInputElement>document.getElementById('inputMc')).value,
+            parseFloat((<HTMLInputElement>document.getElementById('inputMr')).value),
+            (<HTMLInputElement>document.getElementById('inputColor')).value,
+            (<HTMLInputElement>document.getElementById('inputProc')).value,
+            (<HTMLInputElement>document.getElementById('inputDis')).value,
+            (<HTMLInputElement>document.getElementById('inputMem')).value,
+            (<HTMLInputElement>document.getElementById('inputOs')).value,
+            (<HTMLImageElement>document.getElementById('mobImg')).src
+        ]);
+        localStorage.setItem("ads", JSON.stringify(ad));
+        location.reload();
+    }
+}

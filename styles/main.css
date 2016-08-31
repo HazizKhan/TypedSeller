@@ -40,10 +40,9 @@
     font-size: large;
 }
 .modal{
-    !important;padding: 0;
-    /*height: 100vh;*/
-    /*overflow: scroll;*/
     width: 100%;
+    /*padding-left: 17px;padding-right:17px;*/
+    height:100vh;
 }
 .modalData{
     overflow-y: scroll;
@@ -52,6 +51,7 @@
 .modal-dialog{
     width: 100%;
     margin: 0;
+    height: 100vh;
 
 }
 .modal-body{
@@ -97,10 +97,17 @@ table{
 .modal{
     display: none;
 }
-
-
-
-
+h2.modalImg{
+    width: 100%;
+    /*display: block;*/
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    /*left: 50%;*/
+    text-align: center;
+    color: white;
+    transform: translate(-50%, -50%);
+}
 @media only screen and (min-width: 500px) and (max-width:768px){
     .item img{
         height: 300px;
@@ -114,8 +121,16 @@ table{
         /*display: block;*/
         margin: auto;
         display: block;
-
-
+    }
+    .modalData{
+        padding:0;
+    }
+    .Title{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .price{
+        padding-left: 20px;
     }
     .over{
         margin-top:190px; padding-top:5px;
@@ -138,11 +153,22 @@ table{
         display: block;
 
     }
+    .modalData{
+        padding:0;
+    }
     .over{
         margin-top:190px; padding-top:5px;
         font-size: x-large;
     }
+    .Title{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .price{
+        padding-left: 20px;
+    }
 }
+
 @media only screen and (min-width: 769px){
     .item img{
         height: 240px;
@@ -164,7 +190,7 @@ table{
         height: 89.5vh;
     }
     .over{
-        margin-top:145px; font-size:large; padding-top:15px; padding-bottom: 15px;
+        margin-top:160px; font-size:large; padding-top:5px;
     }
 }
 @media only screen and (min-width: 992px) {
@@ -188,15 +214,16 @@ table{
         height: 91.5vh;
     }
     .over{
-        margin-top: 125px; font-size:x-large; padding-top:5px;
+        margin-top: 120px; font-size:25px; padding-top:5px;
     }
+
 }
 @media only screen and (min-width: 1200px){
     .item img{
-        height: 210px;
+        height: 250px;
     }
     .boxTitle{
-        margin-top: 130px;
+        margin-top: 170px;
         overflow: hidden;
         padding-right: 5px;
         padding-left: 5px;
@@ -212,9 +239,12 @@ table{
         transform: translate(-50%, -50%);
     }
     .modalData{
-        height: 91.5vh;
+        height: 89.8vh;
     }
     .over{
-    !important;margin-top:135px; font-size:large; padding-top:5px;
+        margin-top: 170px; font-size:25px; padding-top:5px;
     }
+}
+#mobImg, #carImg{
+    display: none;
 }

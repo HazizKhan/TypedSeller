@@ -26,7 +26,12 @@
             <li><a data-toggle="tab" href="#cars">Cars</a></li>
         </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-plus"></span> Post Ad </a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-plus"></span> Post Ad<span class="caret"></span> </a>
+                    <ul class="dropdown-menu">
+                        <li><a data-toggle="modal" data-target="#postCar">Post Car Ad</a></li>
+                        <li><a data-toggle="modal" data-target="#postMobile">Post Mobile Ad</a></li>
+                    </ul>
+                </li>
             </ul>
             </div>
     </div>
@@ -44,8 +49,109 @@
     </div>
 </div>
 <div id="modals">
+    <!--PostAds Modals-->
+    <!--Post Car Ad Modal-->
+    <div id="postCar" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" data-dismiss="modal"><span class="glyphicon glyphicon-menu-left"></span>Back</h4>
+                </div>
+                <form onsubmit="postAd('car');" action="javascript:void(0)">
+                <div class="modal-body">
+                    <div class="row">
+                            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 modalData cols" style="background-color: black" id="imageHolder">
+                                <h2 class="modalImg" id="carNoImg">No Image Available Now!</h2>
+                                <img src="" alt="" class="modalImg" id="carImg">
+                            </div>
+                            <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12 modalData">
+                                <h2 class="Title" style="padding-bottom: 10px;">Post Car Ad:</h2>
+                                <input class="form-control" type="text" placeholder="Write Company Here!" id="inputCComp" required>
+                                <input class="form-control" type="text" placeholder="Write Model Here!" id="inputCm" required>
+                                <br>
+                                <label>Upload Image: <input type="file" class="form-control" onchange="imageUpload(carNoImg, cimg, this)" required></label>
+                                <table class="table table-striped">
+                                    <tr><th>Engine: </th><td><input type="text" class="form-control" id="inputEngine" required></td></tr>
+                                    <tr><th>EPA Class: </th><td><input type="text" class="form-control" id="inputEpa" required></td></tr>
+                                    <tr><th>Style Name: </th><td><input type="text" class="form-control" id="inputsname" required></td></tr>
+                                    <tr><th>Drivetrain:</th><td><input type="text" class="form-control" id="inputDt" required></td></tr>
+                                    <tr><th>Passenger Capacity: </th><td><input type="number" class="form-control" id="inputPc" required></td></tr>
+                                    <tr><th>Passenger Doors: </th><td><input type="number" class="form-control" id="inputPd" required></td></tr>
+                                    <tr><th>Body Style:</th><td><input type="text" class="form-control" id="inputBs" required></td></tr>
+                                    <tr><th>Colors: </th><td><input type="text" class="form-control" id="inputCc" required></td></tr>
+                                    <tr><th>Price</th><td>Rs. <input type="number" class="form-control" style="display: inline; width: 120px" id="inputCr" required></td></tr>
+                                </table>
+                                <input type="submit" class="btn btn-default" value="Submit" style="float: right">
+                                <br>
+                                <br>
+                            </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        </div>
+    </div>
+    <!--Post Car Ad Modal Close-->
+    <!--Post Mobile Ad Modal-->
+    <div id="postMobile" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" data-dismiss="modal"><span class="glyphicon glyphicon-menu-left"></span>Back</h4>
+                </div>
+                <form onsubmit="postAd('mob');" action="javascript:void(0)">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 modalData cols" style="background-color: black">
+                                <h2 class="modalImg" id="mobNoImg">No Image Available Now!</h2>
+                                <img src="" alt="" class="modalImg" id="mobImg">
+                            </div>
+                            <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12 modalData">
+                                <h2 class="Title" style="padding-bottom: 10px;">Post Mobile Ad:</h2>
+                                <input class="form-control" type="text" placeholder="Write Company Here!" id="inputMc" required>
+                                <input class="form-control" type="text" placeholder="Write Model Here!" id="inputMm" required>
+                                <br>
+                                <label>Upload Image: <input type="file" class="form-control" onchange="imageUpload(mobNoImg, mimg, this)" required></label>
+                                <table class="table table-striped">
+                                    <tr><th>OS:</th><td><input type="text" class="form-control" id="inputOs" required></td></tr>
+                                    <tr><th>Memory:</th><td><input type="text" class="form-control" id="inputMem" required></td></tr>
+                                    <tr><th>Processor: </th><td><input type="text" class="form-control" id="inputProc" required></td></tr>
+                                    <tr><th>Display:</th><td><input type="text" class="form-control" id="inputDis" required></td></tr>
+                                    <tr><th>Colors</th><td><input type="text" class="form-control" id="inputColor" required></td></tr>
+                                    <tr><th>Price</th><td>Rs.  <input type="number" class="form-control" style="display: inline; width: 120px" id="inputMr" required></td></tr>
+                                </table>
+                                <input type="submit" class="btn btn-default" value="Submit" style="float: right">
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--Post Mobile Ad Modal Close-->
+
+    <!--Post Ads Modals Close-->
 </div>
 <script src="lib/bootstrap/js/bootstrap.js"></script>
 <script src="scripts/app.js"></script>
+<script>
+    var $modal = $(".modal");
+    $modal.each(function () {
+        var $this = $(this);
+        $this.on('shown.bs.modal', function(){
+//       $modal.style.overflow = "hidden";
+            if($this.attr("style")) {
+            $this.attr("style", "display:block;");
+            }
+    })
+        });
+//    $('#postCar').modal('show');
+</script>
 </body>
 </html>
